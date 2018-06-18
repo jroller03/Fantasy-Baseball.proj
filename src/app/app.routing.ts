@@ -7,7 +7,7 @@ import { LeagueHomeComponent } from './league-home/league-home.component';
 import { MatchupComponent } from './matchup/matchup.component';
 import { LeagueSettingsComponent } from './league-settings/league-settings.component';
 import { FantasyHomeComponent } from './fantasy-home/fantasy-home.component';
-
+import { LeagueMessagesComponent } from './league-messages/league-messages.component';
 
 const appRoutes: Routes = [
   {
@@ -37,6 +37,10 @@ const appRoutes: Routes = [
   {
     path: 'fantasy-home',
     component: FantasyHomeComponent
+  },
+  {
+    path: 'league-messages',
+    component: LeagueMessagesComponent
   }
 ];
 

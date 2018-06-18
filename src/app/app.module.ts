@@ -12,6 +12,7 @@ import { LeagueHomeComponent } from './league-home/league-home.component';
 import { MatchupComponent } from './matchup/matchup.component';
 import { LeagueSettingsComponent } from './league-settings/league-settings.component';
 import { FantasyHomeComponent } from './fantasy-home/fantasy-home.component';
+import { LeagueMessagesComponent } from './league-messages/league-messages.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FantasyHomeComponent } from './fantasy-home/fantasy-home.component';
     LeagueHomeComponent,
     MatchupComponent,
     LeagueSettingsComponent,
-    FantasyHomeComponent
+    FantasyHomeComponent,
+    LeagueMessagesComponent
   ],
   imports: [
     BrowserModule,
