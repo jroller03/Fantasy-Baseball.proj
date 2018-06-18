@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { routing } from './app.routing';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
+import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -12,7 +13,21 @@ import { LeagueHomeComponent } from './league-home/league-home.component';
 import { MatchupComponent } from './matchup/matchup.component';
 import { LeagueSettingsComponent } from './league-settings/league-settings.component';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { masterFirebaseConfig } from './api-keys';
 
+import { PublicComponent } from './public/public.component';
+import { PrivateComponent } from './private/private.component';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket,
+  messagingSenderId: masterFirebaseConfig.messagingSenderId
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,12 +36,18 @@ import { LeagueSettingsComponent } from './league-settings/league-settings.compo
     TeamPageComponent,
     LeagueHomeComponent,
     MatchupComponent,
-    LeagueSettingsComponent
+    LeagueSettingsComponent,
+    PublicComponent,
+    PrivateComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
