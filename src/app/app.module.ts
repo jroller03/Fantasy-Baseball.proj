@@ -12,6 +12,8 @@ import { TeamPageComponent } from './team-page/team-page.component';
 import { LeagueHomeComponent } from './league-home/league-home.component';
 import { MatchupComponent } from './matchup/matchup.component';
 import { LeagueSettingsComponent } from './league-settings/league-settings.component';
+import { FantasyHomeComponent } from './fantasy-home/fantasy-home.component';
+import { LeagueMessagesComponent } from './league-messages/league-messages.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -37,8 +39,8 @@ export const firebaseConfig = {
     LeagueHomeComponent,
     MatchupComponent,
     LeagueSettingsComponent,
-    PublicComponent,
-    PrivateComponent
+    FantasyHomeComponent,
+    LeagueMessagesComponent
   ],
   imports: [
     BrowserModule,
