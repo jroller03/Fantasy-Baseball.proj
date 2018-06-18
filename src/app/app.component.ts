@@ -13,7 +13,7 @@ export class AppComponent {
   private isLoggedIn: Boolean;
   private userName: String;
   title = 'Fantasy Baseball';
-
+  devNames = "Verna Santos, Andrew Lupton, David Tumpowsky, Jimmy McNamara, Justin Roller"
   constructor(public authService: AuthenticationService,
     // private router: Router
     ) {
