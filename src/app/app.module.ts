@@ -6,12 +6,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PlayerListComponent } from './player-list/player-list.component';
+import { TeamPageComponent } from './team-page/team-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    PlayerListComponent,
+    TeamPageComponent
   ],
   imports: [
     BrowserModule,
