@@ -1,22 +1,28 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" routerLink="">Authentication Example</a>
+      <!-- <a class="navbar-brand" routerLink="/">Home</a> -->
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li *ngIf="isLoggedIn">If the user is logged in, we’ll show that user’s name along with an event binding to logout.
+      <li *ngIf="isLoggedIn">
         <a>{{userName}}</a>
-        <a (click)="logout()">Log out</a>
+        <a class="navbar-brand btn btn-outline-secondary" (click)="logout()">Log out</a>
       </li>
-      <li *ngIf ="!isLoggedIn">If the user isn’t logged in, we’ll have an event binding to login.
-        <a class="btn btn-outline-primary" (click)="login()">Log in</a>
+      <li *ngIf ="!isLoggedIn">
+        <a class="navbar-brand btn btn-outline-secondary" (click)="login()">Log in</a>
       </li>
     </ul>
   </div>
 </nav>
 <nav class="navbar sticky-top">
-  <a class="navbar-brand" routerLink="/">Home</a>
-  <a>If user is signed in a sign out option will appear</a>
+  <a class="navbar-brand btn btn-outline-secondary" routerLink="/">Home</a>
+  <ul>
+    <a class="btn btn-outline-secondary"routerLink="league-home">League Home</a>
+    <a class="btn btn-outline-secondary"routerLink="team-page">Team Page</a>
+    <a class="btn btn-outline-secondary"routerLink="player-list">Player List</a>
+    <a class="btn btn-outline-secondary"routerLink="matchup">Matchup</a>
+    <a class="btn btn-outline-secondary"routerLink="league-settings">League Settings</a>
+  </ul>
 </nav>
 
 <div class="container">
@@ -24,4 +30,5 @@
 </div>
 
 <footer class="footer">
+  <p>© 2018 {{devNames}}</p>
 </footer>
