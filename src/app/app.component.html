@@ -6,16 +6,16 @@
     <ul class="nav navbar-nav navbar-right">
       <li *ngIf="isLoggedIn">
         <a>{{userName}}</a>
-        <a class="navbar-brand btn btn-outline-secondary" (click)="logout()">Log out</a>
+        <a class="btn btn-outline-secondary" (click)="logout()">Log out</a>
       </li>
       <li *ngIf ="!isLoggedIn">
-        <a class="navbar-brand btn btn-outline-secondary" (click)="login()">Log in</a>
+        <a class="btn btn-outline-secondary" (click)="login()">Log in</a>
       </li>
     </ul>
   </div>
 </nav>
 <nav class="navbar sticky-top">
-  <a class="navbar-brand btn btn-outline-secondary" routerLink="/">Home</a>
+  <a class="navbar-brand btn btn-secondary" routerLink="/">Home</a>
   <ul>
     <a class="btn btn-outline-secondary"routerLink="league-home">League Home</a>
     <a class="btn btn-outline-secondary"routerLink="team-page">Team Page</a>
