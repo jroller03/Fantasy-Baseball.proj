@@ -1,15 +1,17 @@
 <!-- if the user is logged in this stuff will show, otherwise it will be hidden -->
 <nav class="navbar sticky-top">
   <ul>
-    <a class="btn btn-secondary btn-sm"routerLink="../fantasy-home">Fantasy Home</a>
-    <a class="btn btn-secondary btn-sm"routerLink="../league-home">League Home</a>
-    <a class="btn btn-secondary btn-sm"routerLink="../team-page">Team Page</a>
-    <a class="btn btn-secondary btn-sm"routerLink="../player-list">Player List</a>
-    <a class="btn btn-secondary btn-sm"routerLink="../matchup">Matchup</a>
-    <a class="btn btn-secondary btn-sm"routerLink="../league-settings">League Settings</a>
+    <a class="btn btn-secondary btn-sm" routerLink="../fantasy-home">Fantasy Home</a>
+    <a class="btn btn-secondary btn-sm" routerLink="../league-home">League Home</a>
+    <a class="btn btn-secondary btn-sm" routerLink="../team-page">Team Page</a>
+    <a class="btn btn-secondary btn-sm" routerLink="../player-list">Player List</a>
+    <a class="btn btn-secondary btn-sm" routerLink="../matchup">Matchup</a>
+    <a class="btn btn-secondary btn-sm" routerLink="../league-settings">League Settings</a>
     <a class="btn btn-secondary btn-sm"routerLink="../league-messages">League Messages</a>
   </ul>
 </nav>
+<h1>{{(leagueToDisplay | async)?.leagueName}}</h1>
+<h3>{{(leagueToDisplay | async)?.numberOfTeams}}</h3>
 <table class="table">
   <tr>
     <th>Rank</th>
