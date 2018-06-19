@@ -1,0 +1,11 @@
+{ "leagues": [{
+    "leagueName": "group week fantasy",
+    "numberOfTeams": "6"
+    }, {
+    "leagueName": "baseball",
+    "numberOfTeams": "4"
+      }, {
+    "leagueName": "fatastic",
+    "numberOfTeams": "8"
+  }]
+}

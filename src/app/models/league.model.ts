@@ -1,3 +1,7 @@
+import { Team } from './team.model';
+
 export class League {
-  constructor(public leagueName: string, public teams: string[]) { }
+  teams: Team[] = [];
+  constructor(public leagueName: string, public numberOfTeams: number) {
+  }
 }
