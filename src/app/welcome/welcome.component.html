@@ -5,5 +5,5 @@
 
 <h3>Teams/leagues you are currently involved with:</h3>
 <ul>
-  <a class="btn btn-secondary"routerLink="league-home">Link for example team/league that will take user to league or team page</a>
+  <li *ngFor="let league of leagues | async" (click)="goToLeaguePage(league)">{{league.leagueName}}</li>
 </ul>

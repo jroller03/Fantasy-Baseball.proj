@@ -28,7 +28,7 @@ const appRoutes: Routes = [
     component: MatchupComponent
   },
   {
-    path: 'league-home',
+    path: 'league-home/:id',
     component: LeagueHomeComponent
   },
   {
