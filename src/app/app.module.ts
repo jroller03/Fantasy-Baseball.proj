@@ -9,21 +9,13 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { TeamPageComponent } from './team-page/team-page.component';
-import { LeagueHomeComponent } from './league-home/league-home.component';
 import { MatchupComponent } from './matchup/matchup.component';
-import { LeagueSettingsComponent } from './league-settings/league-settings.component';
-import { FantasyHomeComponent } from './fantasy-home/fantasy-home.component';
-import { LeagueMessagesComponent } from './league-messages/league-messages.component';
-
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { masterFirebaseConfig } from './api-keys';
-
-import { PublicComponent } from './public/public.component';
-import { PrivateComponent } from './private/private.component';
-import { CreateLeagueComponent } from './create-league/create-league.component';
-import { AddTeamToLeagueComponent } from './add-team-to-league/add-team-to-league.component';
+import { CreateTeamComponent } from './create-team/create-team.component';
+import { LeagueHomeComponent } from './league-home/league-home.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -38,13 +30,9 @@ export const firebaseConfig = {
     WelcomeComponent,
     PlayerListComponent,
     TeamPageComponent,
-    LeagueHomeComponent,
     MatchupComponent,
-    LeagueSettingsComponent,
-    FantasyHomeComponent,
-    LeagueMessagesComponent,
-    CreateLeagueComponent,
-    AddTeamToLeagueComponent
+    CreateTeamComponent,
+    LeagueHomeComponent
   ],
   imports: [
     BrowserModule,
