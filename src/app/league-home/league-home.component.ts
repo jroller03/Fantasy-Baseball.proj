@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { LeagueService } from '../league.service';
+import { League } from '../models/league.model';
 
 @Component({
   selector: 'app-league-home',
