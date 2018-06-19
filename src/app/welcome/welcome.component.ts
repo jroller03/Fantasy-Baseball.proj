@@ -22,6 +22,7 @@ export class WelcomeComponent implements OnInit {
     // this.leagues = this.leagueService.getLeagues();
     this.teams = this.teamService.getTeams();
   }
+
   goToLeaguePage(league, team) {
     this.router.navigate(['team-page', team.$key]);
   }
