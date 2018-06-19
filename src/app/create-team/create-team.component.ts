@@ -8,7 +8,6 @@ import { TeamService } from '../team.service';
   providers: [TeamService]
 })
 export class CreateTeamComponent implements OnInit {
-
   constructor(private teamService: TeamService) { }
 
   ngOnInit() {
