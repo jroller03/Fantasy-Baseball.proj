@@ -10,6 +10,8 @@
     <a class="btn btn-secondary btn-sm"routerLink="../league-messages">League Messages</a>
   </ul>
 </nav>
+<h1>{{(leagueToDisplay | async)?.leagueName}}</h1>
+<h3>{{(leagueToDisplay | async)?.numberOfTeams}}</h3>
 <table class="table">
   <tr>
     <th>Rank</th>

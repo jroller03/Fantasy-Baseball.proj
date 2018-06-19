@@ -16,4 +16,8 @@ export class LeagueService {
   addLeague(newLeague: League) {
     this.leagues.push(newLeague);
   }
+
+  getLeagueById(leagueId: string) {
+    return this.database.object('leagues/' + leagueId);
+  }
 }
