@@ -3,12 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { TeamPageComponent } from './team-page/team-page.component';
-import { LeagueHomeComponent } from './league-home/league-home.component';
 import { MatchupComponent } from './matchup/matchup.component';
-import { LeagueSettingsComponent } from './league-settings/league-settings.component';
-import { FantasyHomeComponent } from './fantasy-home/fantasy-home.component';
-import { LeagueMessagesComponent } from './league-messages/league-messages.component';
-import { CreateLeagueComponent } from './create-league/create-league.component';
+import { CreateTeamComponent } from './create-team/create-team.component';
+import { LeagueHomeComponent } from './league-home/league-home.component';
 
 const appRoutes: Routes = [
   {
@@ -16,36 +13,24 @@ const appRoutes: Routes = [
     component: WelcomeComponent
   },
   {
-    path: 'player-list',
-    component: PlayerListComponent
+    path: 'create-team',
+    component: CreateTeamComponent
   },
   {
     path: 'team-page',
     component: TeamPageComponent
   },
   {
+    path: 'player-list',
+    component: PlayerListComponent
+  },
+  {
     path: 'matchup',
     component: MatchupComponent
   },
   {
-    path: 'league-home/:id',
+    path: 'league-home',
     component: LeagueHomeComponent
-  },
-  {
-    path: 'league-settings',
-    component: LeagueSettingsComponent
-  },
-  {
-    path: 'fantasy-home',
-    component: FantasyHomeComponent
-  },
-  {
-    path: 'league-messages',
-    component: LeagueMessagesComponent
-  },
-  {
-    path: 'create-league',
-    component: CreateLeagueComponent
   }
 ];
 
