@@ -22,6 +22,7 @@ import { masterFirebaseConfig } from './api-keys';
 
 import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
+import { CreateLeagueComponent } from './create-league/create-league.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -40,7 +41,8 @@ export const firebaseConfig = {
     MatchupComponent,
     LeagueSettingsComponent,
     FantasyHomeComponent,
-    LeagueMessagesComponent
+    LeagueMessagesComponent,
+    CreateLeagueComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Create new fantasy baseball league</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>League Name</label>
+        <br>
+        <input #newLeagueName>
+      </div>
+
+      <div>
+        <select>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+          <option value='8'>8</option>
+        </select>
+      </div>
+
+      <div>
+        <button (click)="submitLeague(newLeagueName.value, numberOfTeams.value); newLeagueName.value=''; numberOfTeams.value=''">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
