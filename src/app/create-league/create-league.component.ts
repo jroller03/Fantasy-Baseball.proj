@@ -15,9 +15,9 @@ export class CreateLeagueComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitLeague(name: string, teams: number) {
-    var newLeague: League = new League(name, teams);
-    this.leagueService.addLeague(newLeague);
-  }
+  // submitLeague(name: string, teams: number) {
+  //   var newLeague: League = new League(name, teams);
+  //   this.leagueService.addLeague(newLeague);
+  // }
 
 }
