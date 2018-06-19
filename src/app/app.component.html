@@ -1,11 +1,11 @@
-<nav class="navbar navbar-default">
+<nav id="topnav" class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <!-- <a class="navbar-brand" routerLink="/">Home</a> -->
+      <a class="navbar-brand btn btn-outline-secondary" routerLink="/">Home</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li *ngIf="isLoggedIn">
-        <a>{{userName}}</a>
+        <a class="btn">User: {{userName}}</a>
         <a class="btn btn-outline-secondary" (click)="logout()">Log out</a>
       </li>
       <li *ngIf ="!isLoggedIn">
@@ -14,14 +14,27 @@
     </ul>
   </div>
 </nav>
-<nav class="navbar sticky-top">
-  <a class="navbar-brand btn btn-secondary" routerLink="/">Home</a>
-</nav>
+<nav id="actionNav" class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
 
+    </div>
+    <ul class="">
+      <a class="btn btn-outline-secondary"routerLink="league-home">League Home</a>
+      <a class="btn btn-outline-secondary"routerLink="team-page">Team Page</a>
+      <a class="btn btn-outline-secondary"routerLink="player-list">Player List</a>
+      <a class="btn btn-outline-secondary"routerLink="matchup">Matchup</a>
+      <a class="btn btn-outline-secondary"routerLink="league-settings">League Settings</a>
+    </ul>
+  </div>
+</nav>
+<!-- body content -->
 <div class="container">
   <router-outlet></router-outlet>
 </div>
-
+<!-- footer -->
 <footer class="footer">
-  <p>© 2018 {{devNames}}</p>
+  <div class="container-fluid">
+    <p>© 2018 {{devNames}}</p>
+  </div>
 </footer>
