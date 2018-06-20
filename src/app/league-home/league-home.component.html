@@ -1,9 +1,27 @@
 <!-- if the user is logged in this stuff will show, otherwise it will be hidden -->
-<div class="container">
-  <h3>Teams you are currently participating in:</h3>
-  <div class="panel panel-default" *ngFor="let team of teams | async">
-    <div class="panel panel-body">
-      <h4 (click)="goToTeamPage(team)"><a class="btn btn-info">{{team.teamName}}</a></h4>
-    </div>
+<h3>Teams you are currently participating in:</h3>
+<br>
+<div class="panel panel-default" *ngFor="let team of teams | async">
+  <div class="panel panel-body">
+    <h4 (click)="goToTeamPage(team)"><a class="btn btn-info">{{team.teamName}}</a></h4>
   </div>
+</div>
+<br>
+<div class="jumbotron">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>League Rank</th>
+        <th>Team Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let team of teams | async">
+        <!-- insert rank poperty from league model -->
+        <th></th>
+        <!-- can we post this by rank? -->
+        <td>{{team.teamName}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
