@@ -17,8 +17,6 @@ import { masterFirebaseConfig } from './api-keys';
 import { CreateTeamComponent } from './create-team/create-team.component';
 import { LeagueHomeComponent } from './league-home/league-home.component';
 
-import { PublicComponent } from './public/public.component';
-import { PrivateComponent } from './private/private.component';
 import { DraftComponent } from './draft/draft.component';
 
 export const firebaseConfig = {
@@ -35,10 +33,7 @@ export const firebaseConfig = {
     PlayerListComponent,
     TeamPageComponent,
     MatchupComponent,
-    LeagueSettingsComponent,
-    FantasyHomeComponent,
-    LeagueMessagesComponent,
-    DraftComponent
+    DraftComponent,
     CreateTeamComponent,
     LeagueHomeComponent
   ],
