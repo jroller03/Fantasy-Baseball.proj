@@ -4,3 +4,11 @@ table {
 h3, h4 {
   color: #fff;
 }
+.jumbotron {
+  background-color: black;
+  border-radius: 25px;
+
+}
+table {
+  border-radius: 15px;
+}
