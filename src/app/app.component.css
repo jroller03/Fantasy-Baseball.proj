@@ -1,11 +1,12 @@
 .footer {
-    position: fixed;
-    font-size: 8pt;
-    color: #fff;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+  background-color: black;
+  position: fixed;
+  font-size: 8pt;
+  color: #fff;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 a.btn {
   color: #FFF;
