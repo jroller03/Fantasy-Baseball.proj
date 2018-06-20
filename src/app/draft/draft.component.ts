@@ -22,31 +22,30 @@ export class DraftComponent implements OnInit {
     "trout"
   ];
   totalPlayers = [];
-  team1 =[];
-  team2 =[];
-  team3 =[];
-  team4 =[];
-  team5 =[];
-  team6 =[];
-  team7 =[];
-  team8 =[];
-  // $("button").click(function() {
-    // console.log("h");
+  team1 =["1"];
+  team2 =["2"];
+  team3 =["3"];
+  team4 =["4"];
+  team5 =["5"];
+  team6 =["6"];
+  team7 =["7"];
+  team8 =["8"];
+  teams = [this.team1, this.team2, this.team3, this.team4, this.team5, this.team6, this.team7, this.team8];
+
     randomPlayerArray() {
-      if(this.totalPlayers.length == 8) {
-        alert("done drafting");
-      } else {
-        var randomPlayer = this.players[Math.floor(Math.random()*this.players.length)];
-        if(this.totalPlayers.indexOf(randomPlayer) == -1) {
-          this.totalPlayers.push(randomPlayer);
-          this.team1.push(randomPlayer)
-          // parag.innerHTML = players[randomPlayer];
+      for(var i=0; i<8; i++) {
+        if(this.totalPlayers.length < 8) {
+          var randomPlayer = this.players[Math.floor(Math.random()*this.players.length)];
+          if(this.totalPlayers.indexOf(randomPlayer) == -1) {
+            this.totalPlayers.push(randomPlayer);
+            this.teams[i].push(randomPlayer)
+          } else {
+            i -=1;
+          }
+          console.log("team" + (i+1) + " " + this.teams[i]);
         } else {
-          this.randomPlayerArray();
-        }
-
-      console.log(this.team1);
-
+          alert("done drafting");
+      }
     }
   }
 }
