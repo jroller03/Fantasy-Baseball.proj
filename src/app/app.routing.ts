@@ -8,6 +8,7 @@ import { MatchupComponent } from './matchup/matchup.component';
 import { LeagueSettingsComponent } from './league-settings/league-settings.component';
 import { FantasyHomeComponent } from './fantasy-home/fantasy-home.component';
 import { LeagueMessagesComponent } from './league-messages/league-messages.component';
+import { DraftComponent } from './draft/draft.component';
 
 const appRoutes: Routes = [
   {
@@ -41,6 +42,10 @@ const appRoutes: Routes = [
   {
     path: 'league-messages',
     component: LeagueMessagesComponent
+  },
+  {
+    path: 'draft',
+    component: DraftComponent
   }
 ];
 
