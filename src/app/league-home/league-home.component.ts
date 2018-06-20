@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { Team } from '../models/team.model';
 import { TeamService } from '../team.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-league-home',
@@ -15,16 +16,18 @@ export class LeagueHomeComponent implements OnInit {
   teamId: string;
   teamToDisplay;
   teams: FirebaseListObservable<any[]>;
-  constructor(private route: ActivatedRoute, private location: Location, private teamService: TeamService) {
+  constructor(private route: ActivatedRoute, private location: Location, private teamService: TeamService, private router: Router) {
   }
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.teamId = urlParameters['id'];
-    this.teams = this.teamService.getTeams();
+      this.teams = this.teamService.getTeams();
 
     });
     this.teamToDisplay = this.teamService.getTeamById(this.teamId);
-    console.log(this.teams);
   }
 
+  goToTeamPage(team) {
+    this.router.navigate(['team-page', team.$key]);
+  }
 }

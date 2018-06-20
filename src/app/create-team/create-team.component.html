@@ -1,20 +1,14 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Create new fantasy baseball team</h3>
+    <h3 class="panel-title">Create new fantasy team:</h3>
   </div>
-  <div class="panel-body">
-    <div>
-      <div>
-        <label>Team Name</label>
-        <br>
-        <input #newTeamName>
-        <button class="btn btn-outline-info" (click)="createTeam(newTeamName.value); newTeamName.value=''">Add</button>
-      </div>
-      <div class="panel panel-default" *ngFor="let team of teams | async">
-        <div class="panel-body">
-          <h4 (click)="goToTeamPage(team)"><strong>{{team.teamName}}</strong></h4>
-        </div>
-      </div>
-    </div>
+  <br>
+  <div class="panel panel-body">
+    <label>Team Name:</label>
+    <br>
+    <input #newTeamName>
+    <button class="btn btn-outline-info" (click)="createTeam(newTeamName.value); newTeamName.value=''">Add</button>
   </div>
 </div>
+<br>
+<app-league-home></app-league-home>

@@ -23,7 +23,6 @@ export class TeamService {
 
   addTeam(newTeam: Team) {
     this.teams.push(newTeam);
-    // console.log(newTeam);
   }
 
   getTeams(): FirebaseListObservable<Team[]> {
@@ -33,6 +32,6 @@ export class TeamService {
   }
 
   getTeamById(teamId: string) {
-    return this.database.object(`teams/` + teamId);
+    return this.database.object(`teams/${this.userId}/${teamId}`);
   }
 }
