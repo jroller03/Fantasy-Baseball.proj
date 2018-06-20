@@ -6,6 +6,10 @@ import { TeamPageComponent } from './team-page/team-page.component';
 import { MatchupComponent } from './matchup/matchup.component';
 import { CreateTeamComponent } from './create-team/create-team.component';
 import { LeagueHomeComponent } from './league-home/league-home.component';
+import { LeagueSettingsComponent } from './league-settings/league-settings.component';
+import { FantasyHomeComponent } from './fantasy-home/fantasy-home.component';
+import { LeagueMessagesComponent } from './league-messages/league-messages.component';
+import { DraftComponent } from './draft/draft.component';
 
 const appRoutes: Routes = [
   {
@@ -31,6 +35,22 @@ const appRoutes: Routes = [
   {
     path: 'league-home',
     component: LeagueHomeComponent
+  },
+  {
+    path: 'league-settings',
+    component: LeagueSettingsComponent
+  },
+  {
+    path: 'fantasy-home',
+    component: FantasyHomeComponent
+  },
+  {
+    path: 'league-messages',
+    component: LeagueMessagesComponent
+  },
+  {
+    path: 'draft',
+    component: DraftComponent
   }
 ];
 
