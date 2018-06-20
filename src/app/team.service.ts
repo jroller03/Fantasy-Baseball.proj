@@ -10,12 +10,12 @@ export class TeamService {
   constructor(private database: AngularFireDatabase, private afAuth: AngularFireAuth) {
     this.afAuth.authState.subscribe(user => {
       if(user) {
-        console.log(this);
+        // console.log(this);
         this.userId = user.uid;
         this.teams = database.list(`teams/${this.userId}`);
-        console.log(this.userId);
+        // console.log(this.userId);
         this.teams.subscribe(team => {
-          console.log(team);
+          //console.log(team);
         })
       }
     })
@@ -23,7 +23,7 @@ export class TeamService {
 
   addTeam(newTeam: Team) {
     this.teams.push(newTeam);
-    console.log(newTeam);
+    // console.log(newTeam);
   }
 
   getTeams(): FirebaseListObservable<Team[]> {

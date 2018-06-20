@@ -1,31 +1,6 @@
 <!-- if the user is logged in this stuff will show, otherwise it will be hidden -->
-<!-- <nav class="navbar sticky-top">
-  <ul>
-    <a class="btn btn-secondary btn-sm" routerLink="../fantasy-home">Fantasy Home</a>
-    <a class="btn btn-secondary btn-sm" routerLink="../league-home">League Home</a>
-    <a class="btn btn-secondary btn-sm" routerLink="../team-page">Team Page</a>
-    <a class="btn btn-secondary btn-sm" routerLink="../player-list">Player List</a>
-    <a class="btn btn-secondary btn-sm" routerLink="../matchup">Matchup</a>
-    <a class="btn btn-secondary btn-sm" routerLink="../league-settings">League Settings</a>
-    <a class="btn btn-secondary btn-sm" routerLink="../league-messages">League Messages</a>
-  </ul>
-</nav> -->
-<h4>{{teamToDisplay | async}}</h4>
-<!-- <table class="table">
-  <tr>
-    <th>Rank</th>
-    <th>Team Name</th>
-    <th>Fantasy Owner</th>
-    <th>Record</th>
-    <th>Next Game</th>
-    <th>Next Opponent</th>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table> -->
+<div class="panel panel-default" *ngFor="let team of teams | async">
+  <div class="panel-body">
+    <h4 (click)="goToTeamPage(team)"><strong>{{team.teamName}}</strong></h4>
+  </div>
+</div>
