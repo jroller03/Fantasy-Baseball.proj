@@ -1,25 +1,32 @@
 <!-- if the user is logged in this stuff will show, otherwise it will be hidden -->
-<h3>League Teams</h3>
-<div class="panel panel-default" *ngFor="let team of teams | async">
-  <div class="panel panel-body">
-    <h4 (click)="goToTeamPage(team)"><a class="btn btn-info">{{team.teamName}}</a></h4>
+<div class="panel panel-body">
+  <h3>League Teams</h3>
+  <div class="panel panel-default" *ngFor="let team of teams | async">
+    <div class="panel panel-body">
+      <h4 (click)="goToTeamPage(team)"><a class="btn btn-info">{{team.teamName}}</a></h4>
+    </div>
   </div>
 </div>
+
 <br>
 <div class="jumbotron">
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>League Rank</th>
+        <th>Team ID</th>
         <th>Team Name</th>
+        <th>Edit Team</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let team of teams | async">
         <!-- insert rank poperty from league model -->
-        <th></th>
+        <td>{{team.$key}}</td>
         <!-- can we post this by rank? -->
         <td>{{team.teamName}}</td>
+        <td *ngIf="currentRoute === '/league-home' || '/create-team'">
+          <app-edit-team [selectedTeam]="team"></app-edit-team>
+        </td>
       </tr>
     </tbody>
   </table>

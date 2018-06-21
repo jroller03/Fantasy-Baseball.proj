@@ -19,6 +19,7 @@ import { LeagueHomeComponent } from './league-home/league-home.component';
 
 import { DraftComponent } from './draft/draft.component';
 import { AboutComponent } from './about/about.component';
+import { EditTeamComponent } from './edit-team/edit-team.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -37,7 +38,8 @@ export const firebaseConfig = {
     DraftComponent,
     CreateTeamComponent,
     LeagueHomeComponent,
-    AboutComponent
+    AboutComponent,
+    EditTeamComponent
   ],
   imports: [
     BrowserModule,
