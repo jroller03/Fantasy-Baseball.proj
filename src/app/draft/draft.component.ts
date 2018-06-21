@@ -12,21 +12,21 @@ export class DraftComponent implements OnInit {
   ngOnInit() {
   }
   players = [ /*83 players */
-    "schwarber",
-    "rizzo",
-    "abreu",
-    "nolan",
-    "ichiro",
-    "manny",
-    "mookie",
-    "trout",
+    "Schwarber",
+    "Rizzo",
+    "Abreu",
+    "Nolan",
+    "Ichiro",
+    "Manny",
+    "Mookie",
+    "Trout",
     "Allen, Dwayne",
     "Allen, Ryan",
     "Andrews, David",
     "Atkins, John",
     "Bentley, Ja'Whaun",
     "Berrios, Braxton",
-    "ojorquez, Corey",
+    "Seager, Corey",
     "Bolden, Brandon",
     "Bowanko, Luke",
     "Brady, Tom",
@@ -126,7 +126,8 @@ export class DraftComponent implements OnInit {
           }
         }
         console.log(this.freeAgents);
-        console.log(this.team1);
+        console.log("team 1: " + this.team1);
+        console.log("team 2: " + this.team2)
         return this.teams;
       }
       if (i === 7) {
