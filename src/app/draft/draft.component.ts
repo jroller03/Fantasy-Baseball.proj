@@ -2,108 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { Team } from '../models/team.model';
 import { TeamService } from '../team.service';
+import { PlayerService } from '../player.service';
 
 @Component({
   selector: 'app-draft',
   templateUrl: './draft.component.html',
-  styleUrls: ['./draft.component.css']
+  styleUrls: ['./draft.component.css'],
+  providers: [PlayerService]
 })
 export class DraftComponent implements OnInit {
 
-  constructor() { }
+  constructor(private playerService: PlayerService) { }
 
   ngOnInit() {
   }
-  players = [ /*83 players */
-    "Schwarber",
-    "Rizzo",
-    "Abreu",
-    "Nolan",
-    "Ichiro",
-    "Manny",
-    "Mookie",
-    "Trout",
-    "Allen, Dwayne",
-    "Allen, Ryan",
-    "Andrews, David",
-    "Atkins, John",
-    "Bentley, Ja'Whaun",
-    "Berrios, Braxton",
-    "Seager, Corey",
-    "Bolden, Brandon",
-    "Bowanko, Luke",
-    "Brady, Tom",
-    "Britt, Kenny",
-    "Brown, Malcom",
-    "Brown, Trent",
-    "Burkhead, Rex",
-    "Butler, Adam",
-    "Cannon, Marcus",
-    "Cardona, Joe",
-    "Chung, Patrick",
-    "Clayborn, Adrian",
-    "Crossen, Keion",
-    "Croston, Cole",
-    "Davis, Keionta",
-    "Dawson, Duke",
-    "Develin, James",
-    "Dorsett, Phillip",
-    "Ebner, Nate",
-    "Edelman, Julian",
-    "Roller, Justin",
-    "Etling, Danny",
-    "Ferentz, James",
-    "Flowers, Marquis",
-    "Flowers, Trey",
-    "Gillislee, Mike",
-    "Gilmore, Stephon",
-    "Gostkowski, Stephen",
-    "McNamara, Jimmy",
-    "Grigsby, Nicholas",
-    "Grissom, Geneo",
-    "Gronkowski, Rob",
-    "Guy, Lawrence",
-    "Harmon, Duron",
-    "Harris, Trent",
-    "Herron, Frank",
-    "Hightower, Donta",
-    "Hill, Jeremy",
-    "Hogan, Chris",
-    "Santos, Verna",
-    "Hollister, Cody",
-    "Hollister, Jacob",
-    "Hoyer, Brian",
-    "Izzo, Ryan",
-    "Jackson, Jc",
-    "Jelks, Andrew",
-    "John, Ulrick",
-    "Jones, Cyrus",
-    "Jones, David",
-    "Jones, Jonathan",
-    "Karras, Ted",
-    "King, Brandon",
-    "King, Jason",
-    "Langi, Harvey",
-    "Lee, Eric",
-    "Lewis, Ryan",
-    "Mason, Shaq",
-    "Tumbleposwki, Dave",
-    "Matthews, Jordan",
-    "McCarron, Riley",
-    "McCourty, Devin",
-    "McCourty, Jason",
-    "Michel, Sony",
-    "Mitchell, Malcolm",
-    "Moore, An",
-    "Niklas, Troy",
-    "Patterson, Cordarrelle",
-    "Lupton, Andrew",
-    "Richards, Jordan",
-    "Rivers, Derek",
-    "Roberts, Elandon",
-    "Rowe, Eric",
-    "Sam, Christian"
-  ];
+
+  players = this.playerService.playerList
+
   // each team should have exacty 10 players, with 3 free agents
   totalPlayers = [];
   team1 =[];
@@ -132,9 +47,6 @@ export class DraftComponent implements OnInit {
             this.freeAgents.push(this.players[x]);
           }
         }
-        console.log(this.freeAgents);
-        console.log("team 1: " + this.team1);
-        console.log("team 2: " + this.team2)
         return this.teams;
       }
       if (i === 7) {

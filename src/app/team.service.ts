@@ -44,4 +44,5 @@ export class TeamService {
     let teamEntryInFirebase = this.getTeamById(localTeamToDelete.$key);
     teamEntryInFirebase.remove();
   }
+  
 }
