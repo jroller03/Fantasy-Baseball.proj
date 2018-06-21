@@ -5,7 +5,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
 
 @Injectable()
 export class TeamService {
-  teams: FirebaseListObservable<Team[]> = null;
+  teams: FirebaseListObservable<any[]> = null;
+  players: FirebaseListObservable<any[]>;
   userId: string = "";
   constructor(private database: AngularFireDatabase, private afAuth: AngularFireAuth) {
     this.afAuth.authState.subscribe(user => {
@@ -19,10 +20,15 @@ export class TeamService {
         })
       }
     })
+    this.players = database.list('dailyplayerstats/activeplayers/playerentry');
   }
 
   addTeam(newTeam: Team) {
     this.teams.push(newTeam);
+  }
+
+  getPlayers() {
+    return this.players;
   }
 
   getTeams(): FirebaseListObservable<Team[]> {
