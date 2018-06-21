@@ -8,7 +8,11 @@
     <th>Next Game</th>
     <th>Stats placeholder</th>
   </tr>
-  <tr *ngFor="let player of players | async">
-    <td>{{player.FirstName}}</td>
+  <tr *ngFor="let player of players">
+    <td><a routerLink>{{player}}</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>

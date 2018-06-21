@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { Team } from '../models/team.model';
+import { TeamService } from '../team.service';
 
 @Component({
   selector: 'app-draft',
@@ -47,6 +50,7 @@ export class DraftComponent implements OnInit {
     "Dorsett, Phillip",
     "Ebner, Nate",
     "Edelman, Julian",
+    "Roller, Justin",
     "Etling, Danny",
     "Ferentz, James",
     "Flowers, Marquis",
@@ -54,6 +58,7 @@ export class DraftComponent implements OnInit {
     "Gillislee, Mike",
     "Gilmore, Stephon",
     "Gostkowski, Stephen",
+    "McNamara, Jimmy",
     "Grigsby, Nicholas",
     "Grissom, Geneo",
     "Gronkowski, Rob",
@@ -64,6 +69,7 @@ export class DraftComponent implements OnInit {
     "Hightower, Donta",
     "Hill, Jeremy",
     "Hogan, Chris",
+    "Santos, Verna",
     "Hollister, Cody",
     "Hollister, Jacob",
     "Hoyer, Brian",
@@ -81,6 +87,7 @@ export class DraftComponent implements OnInit {
     "Lee, Eric",
     "Lewis, Ryan",
     "Mason, Shaq",
+    "Tumbleposwki, Dave",
     "Matthews, Jordan",
     "McCarron, Riley",
     "McCourty, Devin",
@@ -90,6 +97,7 @@ export class DraftComponent implements OnInit {
     "Moore, An",
     "Niklas, Troy",
     "Patterson, Cordarrelle",
+    "Lupton, Andrew",
     "Richards, Jordan",
     "Rivers, Derek",
     "Roberts, Elandon",
@@ -108,7 +116,6 @@ export class DraftComponent implements OnInit {
   team8 =[];
   teams = [this.team1, this.team2, this.team3, this.team4, this.team5, this.team6, this.team7, this.team8];
   freeAgents = [];
-
   randomPlayerArray() {
     for(var i = 0; i<8; i++) {
       if (this.totalPlayers.length<80) {
