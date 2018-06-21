@@ -8,11 +8,7 @@
     <th>Next Game</th>
     <th>Stats placeholder</th>
   </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+  <tr *ngFor="let player of players">
+    <td>{{(player | async)}}</td>
   </tr>
 </table>
