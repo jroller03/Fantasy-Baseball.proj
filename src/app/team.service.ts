@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Team } from './models/team.model'
+import { Team } from './models/team.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 
@@ -33,5 +33,15 @@ export class TeamService {
 
   getTeamById(teamId: string) {
     return this.database.object(`teams/${this.userId}/${teamId}`);
+  }
+
+  updateTeam(localUpdatedTeam) {
+    let teamEntryInFirebase = this.getTeamById(localUpdatedTeam.$key);
+    teamEntryInFirebase.update({teamName: localUpdatedTeam.teamName})
+  }
+
+  deleteTeam(localTeamToDelete) {
+    let teamEntryInFirebase = this.getTeamById(localTeamToDelete.$key);
+    teamEntryInFirebase.remove();
   }
 }

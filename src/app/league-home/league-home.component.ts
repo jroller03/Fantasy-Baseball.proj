@@ -14,6 +14,8 @@ import { Router } from '@angular/router';
 })
 export class LeagueHomeComponent implements OnInit {
   teamId: string;
+  currentRoute: string = this.router.url;
+
   teamToDisplay;
   teams: FirebaseListObservable<any[]>;
   constructor(private route: ActivatedRoute, private location: Location, private teamService: TeamService, private router: Router) {

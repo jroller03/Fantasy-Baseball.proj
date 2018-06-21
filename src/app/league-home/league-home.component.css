@@ -17,3 +17,6 @@ table {
   border-radius: 15px;
   color: #fff;
 }
+td, th {
+max-width: 100px;
+}
