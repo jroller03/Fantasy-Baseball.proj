@@ -7,6 +7,7 @@ import { MatchupComponent } from './matchup/matchup.component';
 import { CreateTeamComponent } from './create-team/create-team.component';
 import { LeagueHomeComponent } from './league-home/league-home.component';
 import { DraftComponent } from './draft/draft.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
   {
@@ -36,6 +37,10 @@ const appRoutes: Routes = [
   {
     path: 'draft',
     component: DraftComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   }
 ];
 

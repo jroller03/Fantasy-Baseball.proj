@@ -9,6 +9,6 @@
     <th>Stats placeholder</th>
   </tr>
   <tr *ngFor="let player of players">
-    <td>{{(player | async)}}</td>
+    <td>{{(player | async)?.lastName}}</td>
   </tr>
 </table>
