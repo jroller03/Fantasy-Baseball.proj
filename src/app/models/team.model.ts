@@ -1,3 +1,6 @@
 export class Team {
-  constructor(public teamName: string) { }
+  roster: string[] = ["roster test"];
+  constructor(public teamName: string) {
+    this.roster;
+}
 }
