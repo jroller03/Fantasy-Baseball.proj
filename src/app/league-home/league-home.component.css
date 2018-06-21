@@ -7,8 +7,13 @@ h3, h4 {
 .jumbotron {
   background-color: black;
   border-radius: 10px;
-
+  opacity: 0.5;
+  padding: 20px;
+}
+.jumbotron:hover {
+  opacity: 1.0;
 }
 table {
   border-radius: 15px;
+  color: #fff;
 }

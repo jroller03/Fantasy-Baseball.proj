@@ -8,13 +8,20 @@
   width: 100%;
   text-align: center;
 }
+p .footer {
+
+}
 a.btn {
   color: #FFF;
 }
 a, li{
   color: #fff;
 }
-#topnav {
+#topNav {
   padding-top, padding-bottom: 20px;
   background-color: black;
+  overflow: hidden;
+  display: block;
+}
+#actionNav a:hover {
 }
