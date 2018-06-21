@@ -1,1 +1,58 @@
-<button class="btn btn-info" id="generate" (click)="randomPlayerArray()" name="button">Random Draft</button>
+<div class="form-group">
+  <button class="btn btn-info" id="generate" (click)="randomPlayerArray()" name="button">Random Draft</button>
+</div>
+<div class="form-group" >
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Players Drafted</th>
+        <th>Round 1</th>
+        <th>Round 2</th>
+        <th>Round 3</th>
+        <th>Round 4</th>
+        <th>Round 5</th>
+        <th>Round 6</th>
+        <th>Round 7</th>
+        <th>Round 8</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Team 1:</th>
+        <td *ngFor="let team of teams">{{team[0]}}</td>
+      </tr>
+      <tr>
+        <th>Team 2:</th>
+        <td *ngFor="let team of teams">{{team[1]}}</td>
+      </tr>
+      <tr>
+        <th>Team 3:</th>
+        <td *ngFor="let team of teams">{{team[2]}}</td>
+      </tr>
+      <tr>
+        <th>Team 4:</th>
+        <td *ngFor="let team of teams">{{team[3]}}</td>
+      </tr>
+      <tr>
+        <th>Team 5:</th>
+        <td *ngFor="let team of teams">{{team[4]}}</td>
+      </tr>
+      <tr>
+        <th>Team 6:</th>
+        <td *ngFor="let team of teams">{{team[5]}}</td>
+      </tr>
+      <tr>
+        <th>Team 7:</th>
+        <td *ngFor="let team of teams">{{team[6]}}</td>
+      </tr>
+      <tr>
+        <th>Team 8:</th>
+        <td *ngFor="let team of teams">{{team[7]}}</td>
+      </tr>
+      <tr>
+        <th>Free agents</th>
+        <td *ngFor="let freeAgent of freeAgents">{{freeAgent}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
